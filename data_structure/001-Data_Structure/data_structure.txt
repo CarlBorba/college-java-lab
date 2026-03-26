@@ -1,0 +1,22 @@
+Data structure
+
+Primitive data structures(vem na própira linguagem)
+    - Integer
+    - Float
+    - Char
+    - Pointers
+    - Boolean
+
+Non-Primitive Data structure
+    - Matrix
+    - Vector
+    - Array
+    - File
+    - Lists
+        - Linear Lists
+            - Stacks(pilhas)
+            - Queues
+        - Non-Linear Lists
+            - Graphs
+            - Trees
+
