@@ -1,0 +1,6 @@
+HERANÇA
+    É o conceito de que uma classe filha, ou seja, derivada de outra classe, irá herdar as atributos e métodos da classe pai, facilitando assim o reuso de código.
+AGREGAÇÃO
+    É uma parte do todo que pode exitir sem ele. Se o todo parar de existir a parte pode continuar existindo. Exemplo se uma escola(todo) fechar, os professores(parte) continua existindo.
+COMPOSIÇÃO
+    Uma composição é uma parte inseparável do todo, é criada e deletado com ele. Por exemplo um carro(todo) é composto por uma parte(motor), se o carro for destruido o motor também é.
