@@ -1,0 +1,8 @@
+Alocação Estática x Alocação Dinâmica
+- Alocação Estática:
+    - É definido o tamanho no inicio, e este não pode ser alterado.
+    - Possui posições sequenciais na memória.
+- Memória dinâmica:
+    - É definida em tempo de execução de acordo com a necessidade.
+    - Libera memória não usada também em execução automaticamente por meio do Garbage Collector.
+    - Possui posições dinâmicas que podem estar separadas, ou seja, não sequenciais.
