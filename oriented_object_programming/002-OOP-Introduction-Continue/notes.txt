@@ -1,0 +1,5 @@
+JDK
+Kit de desenvolvimento para java
+
+JVM - Java Virtual Machine
+
