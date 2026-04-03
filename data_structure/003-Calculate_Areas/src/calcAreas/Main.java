@@ -23,17 +23,22 @@ public class Main{
         System.out.println("Rectangle area: " + myRectangle.area);
 
         //Triangle
-        double a, c;
+        double x, y, z;
         System.out.println("Type the a: ");
-        a = read.nextDouble();
+        x = read.nextDouble();
         System.out.println("Type the b: ");
-        b = read.nextDouble();
+        y = read.nextDouble();
         System.out.println("Type the c: ");
-        c = read.nextDouble();
-        Triangle myTriangle = new Triangle(a, b, c);
-        if(myTriangle.identifyTriangle()){
-            System.out.println("True");
+        z = read.nextDouble();
+
+        Triangle myTriangle = new Triangle(x, y, z);
+
+        if(myTriangle.validTriangle()){
+            System.out.println("Triangle type: " + myTriangle.identifyTriangle());
+            myTriangle.calcArea();
+            System.out.println("Triangle area: " + myTriangle.area);
+        } else {
+            System.out.println("Invalid triangle!");
         }
-        //System.out.println("Triangle area: " + myTriangle.area);
     }
 }

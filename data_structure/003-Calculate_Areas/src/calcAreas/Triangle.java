@@ -2,43 +2,45 @@ package calcAreas;
 
 public class Triangle {
     // Attributes
-    double a, b, c;
+    double x, y, z;
     double area;
     String triangleType;
 
-    // Methods
-    public Triangle(double a, double b, double c){
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.validTriangle();
+    // Constructor
+    public Triangle(double x, double y, double z){
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
 
-    // Return True if Triangle exist end call identifyTriangle
+    // Check if triangle exists
     public boolean validTriangle() {
-        // Valid Triangle
-        if((this.a + this.b) < this.c || (this.a + this.c) < this.b || (this.b + this.c) < this.a) {
+        if((this.x + this.y) <= this.z ||
+                (this.x + this.z) <= this.y ||
+                (this.y + this.z) <= this.x) {
             return false;
         }
-        identifyTriangle();
         return true;
     }
 
     // Identify Triangle Type
     public String identifyTriangle(){
-        if((this.a == this.b) && (this.b == this.c)){
-            this.triangleType = "equilateral";
+        if((this.x == this.y) && (this.y == this.z)){
+            this.triangleType = "Equilateral";
+        }
+        else if((this.x == this.y) || (this.x == this.z) || (this.y == this.z)){
+            this.triangleType = "Isosceles";
+        }
+        else {
+            this.triangleType = "Scalene";
         }
 
-        if(((this.a == this.b) && (this.a != this.c)) || ((this.a == this.c) && (this.a != this.b)) || ((this.b == this.c) && (this.b != this.a))){
-            this.triangleType = "isoceles";
-        }
-
-        if((this.a != this.b) )
-        return "oi";
+        return this.triangleType;
     }
 
+    // Calculate area (Heron's formula)
     public void calcArea(){
-
+        double p = (this.x + this.y + this.z) / 2.0; // semiperimeter
+        this.area = Math.sqrt(p * (p - this.x) * (p - this.y) * (p - this.z));
     }
 }
