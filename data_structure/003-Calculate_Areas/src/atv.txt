@@ -1,0 +1,24 @@
+1- Explique, com suas palavras, qual a diferença entre uma Classe e um Objeto. Utilize uma analogia do mundo real (como a construção de uma casa ou a fabricação de um carro) para ilustrar sua resposta.
+Uma classe funciona como uma forma para criar objetos, basicamente ela é uma instrução de como os objetos serão, e estes serão a concretização dela. Em uma analogia, a classe é uma planta para a construção de uma casa, onde fica definido que terá um telhado, paredes, cor etc., e os objetos são as próprias casas que foram criadas a partir dessa classe, definindo o valor de cada atributo para o objeto, como altura, escolher a cor, etc.
+
+2- Identifique e descreva a função dos dois componentes principais de uma classe:
+a) Atributos:
+Atributos são variáveis de um objeto, você define eles na classe e atribui valores a eles quando determinado objeto é instanciado.
+b) Métodos:
+Métodos são ações que podem ser realizadas a partir de um objeto, por exemplo a classe carro pode ter um método chamado buzinar, portanto quando instanciar um objeto a essa classe, pode utilizar o método buzinar para que aquele carro execute a ação.
+
+3- O que é um método Construtor e qual é o seu principal objetivo no ciclo de vida de um objeto?
+Um método construtor é um método (ação) que é executado automaticamente quando é instanciado um objeto a partir de uma classe. Ele é essencial para que, por exemplo, ao ser criado um objeto em determinado contexto, dentro de uma função por exemplo, seja possível atribuir valores aos atributos diretamente na criação deste.
+
+4- Imagine que você tem uma classe base MeioDeTransporte com um método mover(). As classes Aviao, Carro e Navio herdam dessa base.
+a) O que acontece quando chamamos o método mover() em uma lista que contém esses três tipos de objetos?
+Nesse caso se aplica o conceito de hierarquia e polimorfismo, como esses objetos são herdados da classe MeioDeTransporte, na hora da chamada dessa lista por exemplo, todos objetos serão tratados como MeioDeTransporte, porem na hora de realizar um método específico, ele será executado de forma determinada a aquele objeto, assumindo ai o conceito de polimorfismo.
+b) Explique como o Polimorfismo permite que cada objeto responda de forma diferente à mesma chamada.
+O polimorfismo tem como objetivo utilizar funções que foram herdadas de uma classe pai, permitindo que tenha um comportamento específico para cada objeto, ou seja, ele sobrescreve metodos para que assuma uma forma diferente para determinado objeto.
+
+5- Desenhe o diagrama de classes para um sistema de Livraria. O sistema deve conter:
+Uma classe base Produto (com nome e preço).
+Classes filhas Livro (com autor) e DVD (com duração).
+Um método aplicarDesconto() que funciona de forma diferente para Livros (10%) e DVDs (20%).
+
+6- Fazer um simples programa em Java que faz a soma de dois números.
