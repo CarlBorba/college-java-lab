@@ -1,0 +1,18 @@
+TAD(Tipo Abastrato de Dado)
+
+- Basicamente abstrai(esconde) os detalhes de implementação deixando exposto apenas aquilo que é usual, para que o usuário possa usar as funções sem precisar saber necessáriamente como é feito por baixo dos panos.
+- Por exemlos as classes, que separam "oque" é feito do "como" é feito.
+
+
+Arrays
+- É uma estrutura de dados que armazena componentes homogênios(do mesmo tipo).
+- Tem tamanho fixo.
+- Possui posições contiguas.
+- Memória pode ser vista como um array.
+
+Lists
+- Alocação estatica
+    - Tamanho fixo    
+- Alocação dinâmica
+    - Pode aumentar e diminuir durante o processo
+- Lista encadeada
