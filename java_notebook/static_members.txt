@@ -1,0 +1,12 @@
+Static members
+
+- Membros são atributos e metódos.
+- Static members são membros que são independentes de objetos, ou seja, não precisam de uma instaniciação para serem usados.
+- São chamados a partir da própria classe.
+- Exemplos: Math.sqrt()
+
+- Dentro de um classe static, por exemplo o static main, não pode chamar methodos que não são statics.
+
+The Golden Rule of Static
+- Static environment: Can only see other Static things. It lives in the "Class Area" of memory.
+- Non-Static (Instance) environment: Lives in the "Heap" memory. It can only be accessed if you have a "pointer" (an object variable like myRectangle) to tell Java which specific instance to look at.
