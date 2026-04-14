@@ -1,0 +1,6 @@
+Linked Lists
+
+- Listas encadeadas são listas em que são formadas por nós.
+- Cada elemento indica onde está o próximo elemento.
+- O ultimo item da lista aponta para null, indicando o final da lista.
+- Uma lista encadeada é composta por head(primeiro item), tail(ultimo item), size.
