@@ -1,0 +1,9 @@
+Access Modifiers
+
+- Sem Modificadores: Acessados por classes no mesmo package.
+- private: Acessado apenas na própria classe.
+- protected: Acessado por classes no mesmo package ou por subclasses de packages diferetes.
+- public: Acessado por todas classes(do mesmo módulo ou importado).
+
+Explicação e visual:
+https://stackoverflow.com/questions/215497/what-is-the-difference-between-public-protected-package-private-and-private-in

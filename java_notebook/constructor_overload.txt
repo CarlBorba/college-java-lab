@@ -1,0 +1,4 @@
+Constructor Overload
+
+- É possível criar mais de um construtor com lista de parâmetros diferentes.
+- Por exemplo 1 construtor com 2 aparemetros e outro com 3 parametros. Quando instânciado um objeto passando 3 parametros, será executado o construtor com 3. 
