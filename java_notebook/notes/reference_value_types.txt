@@ -1,0 +1,7 @@
+Classes são tipos referência
+- Quando se cria um objeto a partir de uma classe, o objeto com os valores dos atributos serão armazenados na memória Heap.
+- Quando atribuido esse objeto á uma variável(p1 = new Product()), na variável p1, que está na Stack da memória, armazena o endereço de memória(Heap) em que está armazenado de fato o objeto.
+
+Tipos primitivos são tipos valores
+- Os tipos primitivos armazenam de fato valores.
+- São armazenado na Stack, e dentro da variável já está o valor.
