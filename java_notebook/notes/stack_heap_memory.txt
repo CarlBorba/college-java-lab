@@ -1,0 +1,15 @@
+Stack vs Heap Memory Allocation
+
+- Stack Memory:
+    - Usado para alocação estática.
+    - Armazena tipos primitivos de dados(int, double, boolean, etc.), e também referências (ponteiros) para objetos.
+    - Cada thread tem sua própria Stack.
+    - São executadas por blocos que são criados e executados linearmente, quando finalizados, são limpos.
+    - Vantagens: São rápidos devido ao acesso simples e linear.
+
+- Heap Memory:
+    - Usado para alocação dinâmica de memória.
+    - Armazena todos os objetos criados com "new".
+    - É compartilhado com todas as threads da aplicação.
+    - Os objetos ficam no Heap até não serem mais referenciados, que nesse momento, serão limpados pelo Garbage Collector.
+    - Um pouco mais lento devido ao processo mais completo de gerenciamento.
