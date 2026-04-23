@@ -1,0 +1,5 @@
+Vectors
+
+- Vetores são arrays unidimensionais.
+- São homogênios, posições ordenadas, e possui tamanho fixo alocado tudo junto.
+- "double[] vect = new double[n];"  -- Criando um vetor de doubles com tamanho n.
