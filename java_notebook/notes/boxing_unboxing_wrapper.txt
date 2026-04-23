@@ -1,0 +1,22 @@
+Boxing, unboxing and Wrapper Classes
+
+- Boxing: É o processo de pegar uma variável primitiva, por exemplo, e transformá-la em um objeto.
+    Exemplo:
+        int x = 10;  // Aqui é uma variável primitiva que está armazenada diretamente na memória Stack.
+        Object obj = x; // Aqui eu estou criando um objeto (herdando a classe Object padrão do Java), e fazendo com que ele aponte para o valor 10 lá na memória Heap.
+        // Ou seja, por mais que seja um valor primitivo, o processo de boxing é transformar ele em um objeto, ou seja, irá virar uma referência ao valor(ponteiro).
+
+- Unboxing: É o processo ao contrário, basicamente será criada uma váriavel na memória Stack, que receberá o valor que estava sendo apontado lá na memória Heap.
+    Exemplo(continuando o código acima):
+        int y = (int) obj; // A variável y que está na Stack receberá o valor que estava sendo apontado pelo ponteiro (objeto) obj.
+
+- Wrapper Classes: São classes equivalentes aos tipos primitivos.
+    - Essas classes equivalentes são usadas para evitar ter que fazer casting quando for fazer boxing e unboxing.
+    - Ao invés de usar a classe global de objetos(Object), pode se usar as Wrapper Classes diretamente.
+    - Exemplo:
+        int x = 10;
+        Integer obj = x;  // Utilizando a Wrapper class para que o Java identifique os tipos automaticamente, evitando castings.
+        int y = obj;
+    - Outra vantagem, é que nas Wrapper Classes são aceitos, além do tipo desejado, os valores null também.
+    - Lembrando que são classes, portanto, ao serem usadas, serão um ponteiro para a memória heap.
+    - Devo usar elas quando posso ter um campo null, ou quando será usado em collections, caso contrário, utilizar os primitivos para proporcionar velocidade, performance e valores obrigatórios.
