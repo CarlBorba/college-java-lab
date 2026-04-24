@@ -1,0 +1,15 @@
+Loop for each
+
+- É uma variação do loop for para usar em collections para percorrê-las;
+- Sintax:
+    for(Type apelido : colletion){
+        System.out.println(apelido);
+    }
+- Ele basicamente resume a declaração de variáveis "i" auxiliares para ser usadas para percorrer a posição da colletion.
+
+- Exemplo:
+    // Evita-se assim o uso de vect[i]
+    // "Para cada obj no vect, faça..."
+    for (String obj : vect) {
+        System.out.println(obj);
+    }
