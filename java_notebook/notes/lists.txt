@@ -1,0 +1,30 @@
+Lists
+
+Caracteristicas:
+    - Homogênea;
+    - Posições ordenadas.
+    - Inicia vazia e pode ser incrementada sob demanda.
+    - Cada elemento fica em um node(nó).
+    - Ou seja, cada lista possui seu elemento e um ponteiro apontando para o próximo elemento da lista.
+    - Uma lista é uma interface, portanto ela precisa ser implementada por uma classe.
+    - Classes que implementam lists: ArrayList, LinkedList, etc.
+
+Comandos:
+    Exemplo de implementação apenas para entender conceitos (assuntos ainda pendentes sobre interfaces, generics, etc.):
+        List<String> list = new ArrayList<>();
+
+    - list.size() // Tamanho da lista
+
+    - list.add(obj)  // Adicionar elementos
+    - list.add(int, obj)  // Adicionar em uma posição específica
+
+    - list.remove(obj)  // Remover um elemento por comparação (posso colocar uma "string" que desejo remover, por exemplo)
+    - list.remove(int)  // Remover por index
+    - list.removeIf(Predicate) // Fazer uma remoção por um predicado (uma função lambda)
+        Exemplo: list.removeIf(x -> x.charAt(0) == "C");  // Remova x (objeto, nesse caso strings) onde o caractere da posição 0 seja igual a "M"
+
+    - indexOf(obj)  // Encontrar um elemento com base em comparação (posso procurar por uma "string" por exemplo). Ps: Retorna o index, ou -1 quando não encontrado.
+    - lastIndexOf(obj)  // 
+
+    - List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());  // Filtrar listas com base em predicados. Você converte para stream primeiro, para ser possível utilizar funções lambdas, depois converte novamente para listas.
+    - Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);  // Encontrar primeira ocorrência com base em predicados. Segue o mesmo conceito de conversão entre stream e lists. Ele encontra o primeiro que atende à condição, ou define  como null se não encontrar.
