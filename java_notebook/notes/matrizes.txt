@@ -1,0 +1,5 @@
+Matrizes | Arrays Bidimensionais
+
+- Matrizes basicamente são vetores bidimensionais, ou seja, são vetores de vetores
+- Possui mesmas características(homogênea, posição ordenada, alocada previamente), vantagens e desvantagens de uso.
+- No Java as matrizes são tratados diretamente como arrays bidimensionais, dando ênfase bastante que possui um vetor base, que cada posição irá apontar para outro vetor.
