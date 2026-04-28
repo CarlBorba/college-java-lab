@@ -1,0 +1,13 @@
+Strings manipulation
+
+- compareTo, compareToIgnoraCase -> Compara duas strings lexicograficamente(ordem alfabética);
+- startsWith e endsWith -> Verifica se a string começa ou termina com determinado texto;
+- toCharArray -> Converte a string em um array de caracteres (char[]);
+- isEmpty -> Retorna true se a string está vazia ("");
+- split -> Quebra uma string em cada caractere definido, e armazena essas separações em um vetor;
+- subString e subSequence -> Extrair subsequencias de determinada string;
+- toLowerCase, toUpperCase -> Mudar a caixa do texto;
+- trim -> Remove espaços no inicio o no fim da string;
+- valueOf -> Converte qualquer valor para string;
+- equals(String s) -> Comparação correta de conteúdo (não usar ==);
+- length -> Retorna o tamanho da string.
