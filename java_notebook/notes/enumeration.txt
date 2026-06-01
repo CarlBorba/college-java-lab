@@ -1,0 +1,3 @@
+Enumaration | enum
+
+- Basicamente 
