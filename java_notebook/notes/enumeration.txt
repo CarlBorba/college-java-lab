@@ -1,3 +1,4 @@
 Enumaration | enum
 
-- Basicamente 
+- Consiste na criação de um tipo personalizado, em que define-se quais tipos de valores uma variável declarada daquele tipo pode receber.
+- Um exemplo de uso seria uma variável para status.
