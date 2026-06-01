@@ -1,0 +1,8 @@
+Design
+
+Categorias de classes:
+- Views: Telas do sistema;
+- Controllers: Faz o controle entre a tela e o sistema(API);
+- Entities: Entidades de negócios por exemplo: Produtos, Cliente, pedidos;
+- Services: Ações a serem realizadas com os dados no sistema;
+- Repositories: Objetos responsáveis por acessar dados por exemplo de um bd.
