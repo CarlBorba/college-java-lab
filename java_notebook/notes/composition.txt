@@ -1,0 +1,9 @@
+Composition
+
+- Um objeto contem o outro.
+- Relação de "tem-um" ou "tem-vários".
+    - "tem-um" --> Uma classe de produto pertece a uma categoria(tem uma categoria).
+    - "tem-vários" --> Uma classe de categorias de produtos, poussui vários produtos, que seria uma lista de produtos(relação de tem vários). 
+- Definida pelo conceito "todo parte".
+- Um exemplo de composição seria um pedido e seus produtos, em que o pedido contem itens.
+- Ou seja, uma classe que representa o todo(pedido), contem as partes(itens do pedido).
