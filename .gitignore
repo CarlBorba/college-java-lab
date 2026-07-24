@@ -9,3 +9,4 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 .idea
+java_notebook/prompt.txt
