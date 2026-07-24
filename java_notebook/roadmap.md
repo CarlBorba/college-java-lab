@@ -7,7 +7,7 @@
 - [X] **1. Fundamentos da Linguagem**
     - Entender bem variáveis, tipos, estruturas de controle (`if`/`for`/`while`) e métodos.
 
-- [ ] **2. Orientação a Objetos (OO)**
+- [X] **2. Orientação a Objetos (OO)**
     - *Aqui é essencial:* classes, objetos, encapsulamento, herança, polimorfismo e interfaces. Isso é a base de praticamente tudo.
 
 - [ ] **3. Collections e Estruturas de Dados**
