@@ -1,24 +1,37 @@
-# 📚 Java Studies Repository
+# ☕ Core Java Studies & Academic Repository
 
-This repository documents my learning journey in the Java programming language throughout my Computer Science degree. It serves both as a practical workspace and as a collection of quick notes, similar to a class notebook, where I register key concepts, examples, and insights gathered during lectures and personal study sessions.
+This repository serves as a comprehensive portfolio of my foundational Java studies and Computer Science coursework. Designed with a strict focus on **pure Java architecture, algorithmic logic, and Object-Oriented Design**, it documents my technical progression and readiness for junior-level backend engineering roles.
+
+It functions as both an academic archive and a self-directed practical workspace, demonstrating a commitment to writing clean, well-structured code.
 
 # 📂 Project Structure
 
-- `college/`: Contains coursework and projects from my university classes, specifically focusing on **Data Structures** (`data_structure/`) and **Object-Oriented Programming** (`oriented_object_programming/`).
-- `java_notebook/`: Dedicated to my personal Java studies, following the structured learning path defined in `roadmap.md`.
-    - The subfolders are organized by roadmap modules (e.g., `2.object_orientation/`, `3.colletions_and_data_structure/`).
-    - Each module folder contains study notes and a **final project** that practically applies the concepts covered in that section.
+```text
+.
+├── college/                  # Academic coursework and university projects
+│   ├── data_structure/       # Pure Java data structure implementations
+│   └── oriented_object_programming/ # Object-oriented programming assignments
+│
+└── java_notebook/            # Self-directed study workspace based on roadmap.md
+    ├── 2.object_orientation/
+    ├── 3.collections_and_data_structure/
+    ├── notes/                # General study notes and documentation references
+    └── roadmap.md            # Structured learning path for personal studies
+```
 
-# 🧠 Topics Covered
+# 🧠 Core Competencies & Topics Covered
 
-Throughout this repository, I focus on developing a strong foundation in:
+Throughout this repository, I focus on developing a rigorous, professional-grade foundation in:
 
-- Object-Oriented Programming (OOP)
-- Data Structures and Algorithms
-- Design Patterns
-- Clean Code principles
-- Java core concepts and best practices
+- **Core Java API:** Deep understanding of the Java Collections Framework, Generics, and native utility classes.
+- **Software Architecture:** Object-Oriented Programming (OOP) paradigms, SOLID principles, and foundational Design Patterns.
+- **Algorithmic Foundation:** Applied data structures, complexity analysis, and building a solid foundation.
+- **Professional Practices:** Clean Code principles, exception handling, and logical system structuring.
 
-# 🚀 Evolution
+# 🛠️ Applied Knowledge (Capstone Projects)
 
-This is an evolving repository that will grow over time as I progress through my degree and continue improving my skills in Java and software development in general.
+To bridge the gap between theory and practice, each study module within the `java_notebook` directory concludes with a dedicated capstone project. These projects are built entirely in pure Java and serve as tangible proof of the concepts studied, showcasing how individual mechanisms integrate into functional applications.
+
+# 🚀 Continuous Evolution
+
+This repository is actively maintained and continuously expanded. It reflects my ongoing commitment to technical excellence and continuous learning as I advance through my degree and prepare for professional software development environments.
