@@ -36,7 +36,7 @@
         *   `getOrDefault(key, defaultValue)`: Retorna o valor associado à chave ou o `defaultValue` caso a chave não esteja presente.
     *   **Remoção:**
         *   `remove(key)`: Remove a chave e seu valor associado, retornando o valor removido (ou `null` se a chave não existir).
-        *   `remove(key, value)`: Remove o par apenas se a chave existir **e** seu valor atual for exatamente igual ao `value` informado.
+        *   `remove(key, value)`: Remove o par apenas se a chave existir **e** seu valor atual for exatamente igual ao `value` informado. Este método retorna true caso a remoção seja realizada.
     *   **Verificação e Status:**
         *   `containsKey(key)`: Retorna `true` se a chave estiver presente no mapa.
         *   `containsValue(value)`: Retorna `true` se o valor estiver associado a pelo menos uma chave.
@@ -47,3 +47,30 @@
         *   `keySet()`: Retorna um `Set` com todas as chaves. Remover um item deste conjunto remove o par correspondente no mapa (não é possível adicionar chaves diretamente por este `Set`).
         *   `values()`: Retorna uma `Collection` com todos os valores. Remover um elemento desta coleção remove a primeira ocorrência correspondente no mapa.
         *   `entrySet()`: Retorna um `Set` contendo todos os pares `Map.Entry<K, V>`.
+
+
+## Map com Expressões Lambda
+
+*   **Iteração e Substituição com Lambdas:**
+    *   `forEach(BiConsumer)`: Substitui o uso do loop `for` tradicional para iterar sobre um `Map`.
+        *   *Exemplo:* `map.forEach((key, value) -> System.out.println(key + " -> " + value));`
+        *   *Explicação:* Passam-se a chave e o valor, definindo logo em seguida a ação a ser realizada a cada iteração.
+    *   `replaceAll(BiFunction)`: O resultado da expressão lambda substitui o valor antigo de cada chave presente no mapa.
+        *   *Exemplo:* `map.replaceAll((nome, nota) -> nota + 5);`
+        *   *Explicação:* Dado um `Map` contendo o par `nome:nota`, a expressão lambda adiciona 5 pontos à nota e substitui a nota original de cada par.
+
+## Métodos Compute
+  
+* **Família de Métodos `compute`:**
+    *   Modificam os valores das chaves a partir de cálculos dinâmicos.
+    *   *Regra de Ouro da Remoção:* Caso a função lambda retorne `null`, a chave é **removida** do `Map`.
+    *   *Retorno:* Sempre retornam o valor final associado à chave após a tentativa de execução.
+    *   **`compute(key, (key, value) -> newValue)`:**
+        *   *Comportamento:* Executa **sempre** (método geral), independentemente de a chave existir, não existir ou possuir valor `null`.
+        *   *Lógica:* Recebe a chave e a função `(key, value) -> newValue`. Se a chave existir, atualiza o valor para `newValue`. Se não existir, cria a chave atrelando-a ao `newValue`.
+    *   **`computeIfPresent(key, (key, oldValue) -> newValue)`:**
+        *   *Comportamento:* Só executa se a chave fornecida **já existir** e seu valor for diferente de `null`.
+        *   *Lógica:* Se a chave estiver presente (e valor `!= null`), atualiza o valor com `newValue`. Se a chave não existir ou for `null`, a lambda não executa. Como regra de retorno, entrega o resultado do cálculo; como nada foi executado, retorna `null`.
+    *   **`computeIfAbsent(key, k -> newValue)`:**
+        *   *Comportamento:* Só executa se a chave **não existir** ou se o valor atrelado a ela for `null`.
+        *   *Lógica:* Se a chave não existir, ela é criada e seu valor recebe `newValue` (gerado por `k -> newValue`). Se a chave já existir (e valor `!= null`), a lambda é ignorada. Como o método sempre retorna o valor final associado à chave, ele devolve o valor antigo que já estava presente no mapa.
