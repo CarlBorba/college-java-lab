@@ -114,3 +114,33 @@
     System.out.println(estoque); // {Teclado=10, Mouse=15, Notebook=8}
     ```
 *   Se a `BiFunction` retornar `null`, o método `merge()` entende que o resultado do cálculo é nulo e **remove a chave** do mapa.
+
+---
+
+## Chaves Mutáveis vs Imutáveis
+*   **Regra de Ouro:** **NUNCA** utilizar objetos mutáveis como chaves (*keys*) em um `Map`.
+*   **Por que não usar?** Métodos como `get()`, `containsKey()` e `remove()` dependem diretamente dos contratos de `hashCode()` e `equals()` para calcular a posição do bucket e localizar a chave.
+*   **Efeito Colateral 1 (Perda de Acesso):** Se uma propriedade de um objeto usado como chave for alterada após a inserção no mapa, seu `hashCode` mudará. Ao tentar buscar essa chave via `get(key)`, o algoritmo procurará no bucket errado, retornando `null` mesmo que o objeto ainda esteja fisicamente armazenado no mapa.
+*   **Efeito Colateral 2 (Colisão/Inconsistência):** Se a alteração do objeto fizer com que seu `hashCode` e `equals` coincidam com outra chave já existente, métodos de busca podem retornar valores trocados ou causar comportamentos imprevisíveis.
+
+---
+
+## Boas Práticas
+*   **Mapas Imutáveis (`Map.of`):** Para a criação rápida de mapas imutáveis (de até 10 entradas), utiliza-se o método de fábrica estático:
+    *   `Map<K, V> mapa = Map.of(k1, v1, k2, v2...);`
+    *   *Atenção:* Não aceita valores ou chaves `null` (lança `NullPointerException`) e lança `IllegalArgumentException` se houver chaves duplicadas na criação.
+
+
+*   **Criação de Mapas Imutáveis Acima de 10 Entradas (`Map.ofEntries`):**
+    *   O `Map.of(...)` possui sobrecargas de 1 a 10 pares. Se necessário, criar um mapa imutável com mais de 10 elementos, o Java disponibiliza o método `Map.ofEntries()`:
+        ```java
+        Map<String, Integer> mapaGiga = Map.ofEntries(
+            Map.entry("k1", 1),
+            Map.entry("k2", 2),
+            // ... quantas entradas precisar
+        );
+        ```
+
+*   **Evitando `NullPointerException` com Autounboxing:** Tentar extrair valores `null` do mapa para atribuição direta em tipos primitivos (ex: `int valor = mapa.get("chave")`) resulta em `NullPointerException`. Para evitar isso:
+    *   Utilizar o método `getOrDefault(key, defaultValue)` para fornecer um valor padrão seguro na leitura.
+    *   Utilizar `putIfAbsent()` ou `computeIfAbsent()` durante a inserção para garantir que valores nulos não sejam armazenados ou fiquem soltos no mapa.
