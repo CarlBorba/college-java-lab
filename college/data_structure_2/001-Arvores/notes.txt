@@ -1,0 +1,30 @@
+Árvores
+
+- Acendente = Pra cima
+- Descendente = Pra baixo
+
+- Árvores são um caso de grafos
+- Cada node tem apenas um antecessor, com exceção da raiz, e pode ter 0 ou mais filhos.
+- Uma árvore é formada por várias sub-árvores, ou seja, cada nó vira a raiz de uma sub-árvore.
+
+Métodos de árvore:
+...
+
+Profundidade de um nó -> Analisar o quão para baixo ele está.
+Altura -> Se conta ao contrário, da folha até a raiz.
+Níveis -> Raiz é o nível 0, e vai aumentando a cada nó descendente.
+Lárgura -> É o maior grau da árvore, ou seja, o nó que tem a maior quantidade de filhos.
+
+
+Árvores binárias
+- Tem no máximo 2 filhos. Inclusive, as folhas possuem dois filhos, que porem, seus valores são null.
+- A cada novo nó resulta em uma subárvore a direita ou a esquerda.
+- Uma árvore estritamente binária tem o número de nós = 2f - 1, onde f é o número de folhas.
+- Em uma árvore cheia, todos nós tem estritamente 0 ou 2 filhos.
+- Toda árvore cheia é estritamente binária.
+
+Árvore binária balanceada
+- A diferença de alturas entre duas sub-árvores de cada nó, podem diferir em no máximo 1.
+
+Árvore binária de busca
+-
