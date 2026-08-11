@@ -1,3 +1,4 @@
+Aula 001
 Árvores
 
 - Acendente = Pra cima
@@ -28,3 +29,17 @@ Lárgura -> É o maior grau da árvore, ou seja, o nó que tem a maior quantidad
 
 Árvore binária de busca
 -
+
+Aula 002
+Deslocamento em árvores
+- Tipos de deslocamento: Pré-ordem, Em-ordem, Pós-ordem
+- Pre ordem: Raiz -> Sub árvore da esquerda -> Sub árvore da direita (Atentando-se que dentro de cada sub árvore de um lado, se repete o processo recursivamente)
+- Em ordem: Filho esquerdo -> Raiz -> Filho direito (Nesse percussão ele sempre desce até o filho, antes de voltar na raiz).
+- Pós ordem: Filho esquerdo -> Filho direito -> Raiz (Desce diretamente para os filhos, depois sobe para raiz ao finalizar todos os filhos da árvore).
+
+Árvores AVL
+- É uma árvore de busca binária, que necessariamente tem que ser ordenada e balanceada.
+- Fator de Balanceamento(FB): (Altura Subárvore Esquerda) - (Altura Subárvore direita)
+    - No balanceado --> FB de = 1, 0, -1
+    - Nó desbalanceado --> FB = 2 ou -2
+- Essa árvore ela se balanceia automáticamente, pois ao adicionar ou remover um item, ela chama a função de calcular o fator de balanceamento, e se for identificado -2 ou 2, ele executa o balanceamento.
