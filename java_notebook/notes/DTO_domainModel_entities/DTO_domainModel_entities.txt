@@ -1,0 +1,5 @@
+DTO(Data Transfer Object) - Basicamente é uma forma de colocar apenas dados essências de uma entidade para passar para outra camada do projeto ou serviço, sem que tenha que expor a entidade por completo. Um exemplo, é que a entidade usuário possui diversos atributos, como senha por exemplo, que não é necessário e até perigoso ser passada para todos os serviços, portanto, cria-se esses DTOs para serviços específicos, para que possa "empacotar" o usuário, apenas com oque ele precisa em determinado serviço.
+
+Domain Model - É a camada em que ficará a lógica central do projeto, nela é especificado tanto os atributos que são usados quando o comportamento e implementação de toda a lógica. Ter esse modelo bem definido, ajuda a manutenção.
+
+Entidade - Mapeiam as entidades que estarão no banco de dados, e também toda a lógica dessa relação com o bd.
