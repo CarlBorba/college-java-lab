@@ -8,15 +8,18 @@ It functions as both an academic archive and a self-directed practical workspace
 
 ```text
 .
-├── college/                  # Academic coursework and university projects
-│   ├── data_structure/       # Pure Java data structure implementations
-│   └── oriented_object_programming/ # Object-oriented programming assignments
+├── college/                         # Academic coursework and university projects
+│   ├── data_structure/
+│   ├── data_structure_2/
+│   └── oriented_object_programming/
 │
-└── java_notebook/            # Self-directed study workspace based on roadmap.md
+└── java_notebook/                   # Self-directed study workspace based on roadmap.md
+    ├── 0.build_tools_and_ecosystem/
+    ├── 1.java_fundamentals/
     ├── 2.object_orientation/
     ├── 3.collections_and_data_structure/
-    ├── notes/                # General study notes and documentation references
-    └── roadmap.md            # Structured learning path for personal studies
+    ├── 4.io_and_streams/
+    └── roadmap.md
 ```
 
 # 🧠 Core Competencies & Topics Covered
