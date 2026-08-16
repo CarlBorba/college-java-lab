@@ -1,0 +1,30 @@
+Garbage Collector
+
+- Ele é um processo que automatiza o gerenciamento de memória de um programa em execução.
+- Limpa a memória HEAP.
+- Objetos que são alocados dinâmicamente(no HEAP), quando não estão sendo referênciados, serão descolados pelo garbage collector.
+
+
+Stack vs Heap Memory Allocation
+- Stack Memory:
+    - Usado para alocação estática.
+    - Armazena tipos primitivos de dados(int, double, boolean, etc.), e também referências (ponteiros) para objetos.
+    - Cada thread tem sua própria Stack.
+    - São executadas por blocos que são criados e executados linearmente, quando finalizados, são limpos.
+    - Vantagens: São rápidos devido ao acesso simples e linear.
+
+- Heap Memory:
+    - Usado para alocação dinâmica de memória.
+    - Armazena todos os objetos criados com "new".
+    - É compartilhado com todas as threads da aplicação.
+    - Os objetos ficam no Heap até não serem mais referenciados, que nesse momento, serão limpados pelo Garbage Collector.
+    - Um pouco mais lento devido ao processo mais completo de gerenciamento.
+
+
+Classes são tipos referência
+- Quando se cria um objeto a partir de uma classe, o objeto com os valores dos atributos serão armazenados na memória Heap.
+- Quando atribuído esse objeto a uma variável(p1 = new Product()), na variável p1, que está na Stack da memória, armazena o endereço de memória(Heap) em que está armazenado de fato o objeto.
+
+Tipos primitivos são tipos valores
+- Os tipos primitivos armazenam de fato valores.
+- São armazenado na Stack, e dentro da variável já está o valor.
