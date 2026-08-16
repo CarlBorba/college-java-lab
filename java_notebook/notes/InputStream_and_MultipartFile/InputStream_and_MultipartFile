@@ -1,0 +1,9 @@
+InputStream
+- No Java puro, um InputStream é um canal sequencial de leitura de bytes vindo de qualquer fonte (um arquivo no disco, a rede, um array de bytes na memória RAM).
+- Funciona como um tipo genérico de arquivo, para que não seja necessário definir cada tipo de arquivo para implementação.
+- Na prática por exemplo, torna possível que eu consiga testar uma função tanto com um arquivo local, quanto com um arquivo inserido em um input web.
+
+MultipartFile
+- O conteúdo do arquivo é armazenado na memória ou temporariamente em disco. Em ambos os casos, o usuário é responsável por copiar o conteúdo do arquivo para um armazenamento de sessão ou persistente, conforme desejar. O armazenamento temporário será apagado ao final do processamento da solicitação.
+- No caso da aplicação que utilizei, é utilizado nesse MultipartFile o método getInputStream().
+- Ao utilizar o getInputStream() será retornado um inputStream normalmente para que poder realizar as manipulações.
