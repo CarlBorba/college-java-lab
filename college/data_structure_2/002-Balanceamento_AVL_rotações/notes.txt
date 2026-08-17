@@ -1,0 +1,10 @@
+Balanceamento AVL - Rotação
+
+- É uma solução para árvores desbalanceadas.
+- Balanceamento dinâmico, assim que a árvore fica desbalanceada ele faz a correção de forma automática.
+- Essa função de balanceamento é executada em toda inserção e remoção.
+- Fato de balanceamento(fb): FB = altura(esq) - altura(dri)
+- É baseada no fator e balanceamento, em que dev ser manter sempre em -1 e 1, assim que atinge -2 ou 2, está desbalanceada.
+
+Rotações
+-
