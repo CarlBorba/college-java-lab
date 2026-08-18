@@ -7,4 +7,30 @@ Balanceamento AVL - Rotação
 - É baseada no fator e balanceamento, em que dev ser manter sempre em -1 e 1, assim que atinge -2 ou 2, está desbalanceada.
 
 Rotações
--
+- Existe 4 tipos básicos de rotações:
+    - Rotação à esquerda
+    - Rotação á direita
+    - Rotação dupla à esquerda
+    - Rotação dupla à direita
+
+- Rotação a esquerda:
+    - Irá basicamente girar no sentido anti horário, e caso o filho da direita da raiz tenha filhos, ele terá que passar a ser filho à direita da antiga raiz que agora será filho a esquerda da nova raiz
+    - Filho da direita vira nova raiz
+    - Filho à esquerda do filho à direita da raiz(nova), vira filho à direita do filho a esquerda(antiga raiz), pois como ele estava à direita da raiz, logo ele é maior que a raiz.
+    - A raiz original vira filho à esquerda da nova raiz
+
+- Rotação a direita:
+    - Irá basicamente girar no sentido horário, e caso o filho da esquerda da raiz tenha filhos, ele terá que passar a ser filho à esquerda da antiga raiz que agora será filho à direita da nova raiz
+    - Filho da esquerda vira nova raiz
+    - Filho à direita do filho à esquerda da raiz(nova), vira filho à esquerda do filho a direita(antiga raiz), pois como ele estava à esquerda da raiz, logo ele é menor que a raiz.
+    - A raiz original vira filho à direita da nova raiz
+
+- Rotação dupla à esquerda
+    - Deve ser realizada quando a raiz possui um fb positivo, porém a subárvore à direita (em que o nó seria a nova raiz), possui fb negativo
+    - Realizar uma rotação simples à direita na subárvore da direita
+    - Realizar uma rotação simples à esquerda na árvore original
+
+- Rotação dupla à direita
+    - Deve ser realizado quando a raiz possui um bf positivo, porém a subárvore à esquerda (em que o nó seria a noca raiz), possui fb negativo
+    - Realizar uma rotação simples à esquerda na subárvore da esquerda
+    - Realizar uma rotação simples à direita na árvore original
