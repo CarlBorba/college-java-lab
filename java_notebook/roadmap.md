@@ -10,10 +10,10 @@
 - [X] **2. Orientação a Objetos (OO)**
     - *Aqui é essencial:* classes, objetos, encapsulamento, herança, polimorfismo e interfaces. Isso é a base de praticamente tudo.
 
-- [ ] **3. Collections e Estruturas de Dados**
+- [X] **3. Collections e Estruturas de Dados**
     - `List`, `Set`, `Map` e as diferenças entre elas. Isso impacta diretamente na forma como você modela e manipula dados.
 
-- [ ] **4. Tratamento de Exceções**
+- [X] **4. Tratamento de Exceções**
     - Saber usar `try/catch` corretamente e entender quando faz sentido usar exceções.
 
 - [ ] **5. Java Moderno (Lambdas e Streams)**
