@@ -34,3 +34,6 @@ Rotações
     - Deve ser realizado quando a raiz possui um bf positivo, porém a subárvore à esquerda (em que o nó seria a noca raiz), possui fb negativo
     - Realizar uma rotação simples à esquerda na subárvore da esquerda
     - Realizar uma rotação simples à direita na árvore original
+
+
+https://joaoarthurbm.github.io/eda/posts/avl/
