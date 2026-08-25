@@ -46,7 +46,6 @@ public class AvlTree {
 
     // --- Insertion ---
 
-    // AQUI É UMA SOBRECARGA PARA QUE NÃO SEJA NECESSÁRIO FICAR PASSANDO A ROOT TODA HORA ???
     public void insert(int key) {
         this.root = insertRecursive(this.root, key);
     }
@@ -65,9 +64,6 @@ public class AvlTree {
             return node; // Duplicate keys not allowed
         }
 
-        // NO CASO ELE SÓ IRÁ PASSAR PARA ESSA PARTE SEGUINTE QUANDO FOR UMA FOLHA NÉ? OU SEJA NÃO POSSUI NÓ A DIREITA NEM A ESQUERDA PARA EXECUTAR NOVAMENTE A INSERÇÃO
-
-        // AQUI ESTÁ ATUALIZANDO A ALTURA DA RAIZ ATUAL? ONDE O NÓ SERÁ INSERIDO ABAIXO DELA?
         // 2. Update height of current node
         updateHeight(node);
 
