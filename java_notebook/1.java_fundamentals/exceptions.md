@@ -37,3 +37,19 @@
             return reader.readLine();
         } // reader.close() é chamado automaticamente aqui, sem necessidade de finally
         ```
+
+
+## Checked vs Unchecked Exceptions
+*   **Checked Exceptions (Exceções Verificadas):**
+    *   São aquelas identificadas pelo compilador Java antes mesmo da execução (em tempo de compilação), obrigando o desenvolvedor a lidar com elas.
+    *   **Tratamento:** Devem ser tratadas diretamente com um bloco `try-catch` ou propagadas adicionando a cláusula `throws NomeDaException` na assinatura do método. Declarar `throws` indica que o método atual não resolverá o erro ali, repassando a responsabilidade do tratamento para quem chamá-lo na pilha de chamadas (*call stack*).
+
+
+*   **Unchecked Exceptions (Exceções Não Verificadas):**
+    *   São aquelas não verificadas em tempo de compilação; o código compila e executa normalmente, mas a exceção pode ser disparada durante o *runtime* (tempo de execução).
+    *   **Tratamento:** Podem ser tratadas opcionalmente com `try-catch` ou propagadas com `throws`, embora o compilador não exija nenhuma dessas ações de forma explícita.
+
+
+*   **Como o Java diferencia tecnicamente Checked de Unchecked:**
+    *   Toda classe que herda direta ou indiretamente de `RuntimeException` (que, por sua vez, herda de `Exception`) é classificada como **Unchecked Exception**.
+    *   Toda classe que herda diretamente de `Exception` (mas **não** é subclasse de `RuntimeException`) é classificada como **Checked Exception**.
