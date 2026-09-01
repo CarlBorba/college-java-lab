@@ -25,11 +25,6 @@
         *   **`Exception`:** Condições anormais que a aplicação pode prever e tratar.
 
 
-*  **Checked vs. Unchecked Exceptions:**
-    *   **Unchecked (`RuntimeException`):** Erros de lógica de programação (ex: `NullPointerException`, `ArrayIndexOutOfBoundsException`, `IllegalArgumentException`). O compilador **não obriga** o tratamento com `try-catch` nem a declaração na assinatura com `throws`.
-    *   **Checked (`Exception` direta):** Erros recuperáveis e externos ao código (ex: `IOException`, `SQLException`). O compilador **obriga** o desenvolvedor a tratar (`try-catch`) ou a propagar explicitamente na assinatura do método (`throws MinhaException`).
-
-
 *  **Try-with-resources (Evolução do `finally`):**
     *   A partir do Java 7, o uso manual de `finally` para fechar conexões/arquivos foi amplamente substituído pela estrutura `try-with-resources`. Qualquer objeto que implemente a interface `AutoCloseable` é fechado automaticamente ao fim do bloco:
         ```java
@@ -38,6 +33,7 @@
         } // reader.close() é chamado automaticamente aqui, sem necessidade de finally
         ```
 
+---
 
 ## Checked vs Unchecked Exceptions
 *   **Checked Exceptions (Exceções Verificadas):**
@@ -53,3 +49,20 @@
 *   **Como o Java diferencia tecnicamente Checked de Unchecked:**
     *   Toda classe que herda direta ou indiretamente de `RuntimeException` (que, por sua vez, herda de `Exception`) é classificada como **Unchecked Exception**.
     *   Toda classe que herda diretamente de `Exception` (mas **não** é subclasse de `RuntimeException`) é classificada como **Checked Exception**.
+
+---
+
+## Custom Exceptions em Java
+
+### 1. Criando a Exceção
+* **Nomenclatura e Convenção:** Uma exceção personalizada deve ser declarada como uma classe em **PascalCase**, terminando convencionalmente com o sufixo `Exception` (ex: `InsufficientBalanceException`).
+* **Herança e Tipagem:**
+    * Estender `RuntimeException` (ou subclasses dela) torna a exceção **Unchecked**.
+    * Estender `Exception` (diretamente, fora da hierarquia de `RuntimeException`) torna a exceção **Checked**.
+* **Lançamento:** Para disparar a exceção manualmente no fluxo de execução, utiliza-se a instrução `throw new MinhaException(...)`.
+
+### 2. Customizando e Estruturando Construtores
+* **Mensagem de Erro (`message`):** Para permitir passar uma mensagem descritiva de erro, cria-se um construtor recebendo `String message` e repassa-se o valor à superclasse via `super(message)`.
+* **Construtor Padrão (Sem Argumentos):** Ao declarar qualquer construtor explícito com parâmetros, o compilador Java remove o construtor padrão implícito. Se for necessário instanciar a exceção sem argumentos (`new MinhaException()`), deve-se declarar explicitamente o construtor vazio.
+* **Encadeamento de Causa (*Exception Chaining*):** Para rastrear quando a exceção foi provocada por outra falha anterior, declara-se um construtor recebendo `Throwable cause` e invoca-se `super(cause)`.
+* **Mensagem + Causa Raiz:** Para detalhar tanto uma mensagem contextual quanto a exceção de origem, declara-se o construtor composto recebendo `(String message, Throwable cause)` e repassa-se via `super(message, cause)`.
